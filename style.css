@@ -1,0 +1,441 @@
+:root{
+  --azul-escuro:#002F6C;
+  --cinza-claro:#D9D9D9;
+  --branco:#fff;
+  --cinza-texto:#333;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+html{
+  scroll-behavior:smooth;
+}
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--cinza-claro);
+  color:var(--cinza-texto);
+  line-height:1.6;
+}
+.navbar{
+  position:fixed;top:0;left:0;z-index:1000;
+  width:100%;
+  height:95px;
+  background:var(--azul-escuro);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 32px;
+  box-shadow:0 2px 6px rgba(0,0,0,.15);
+}
+.logo{
+  width:90px;
+}
+.nav-links{
+  display:flex;gap:50px;
+}
+.nav-btn{
+  color:var(--branco);
+  text-decoration:none;
+  font-weight:600;
+  font-size:1.5rem;
+  padding:8px 14px;
+  border-radius:6px;
+  transition:background .3s ease;
+}
+.nav-btn:hover{background:rgba(255,255,255,.12);
+}
+section[id]{
+  scroll-margin-top:95px;
+}
+.hero{
+  margin-top:95px;                          
+  min-height:calc(100vh - 95px);
+  background:url("imagens/fundopolo1.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  text-align:center;color:#000;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,.6);
+}
+.container-hero{
+  position:relative;
+  z-index:1;
+  max-width:1200px;
+  padding:0 20px;
+}
+.hero-texto h1{
+  font-size:3.2rem;
+  margin:10px 0;
+  font-weight:700;
+  letter-spacing:2px;
+}
+.hero-texto h3{
+  font-size:1.4rem;
+  font-weight:300;
+}
+.produtos{
+  padding:80px 20px;
+  background:var(--branco);
+  text-align:center;
+  background:url("imagens/Fundoquemsomos.png") center/cover no-repeat;
+  padding:100px 20px;
+  text-align:center;
+  color:var(--branco);
+}
+.produtos h2{
+  color:#222;
+  margin-bottom:20px;
+}
+.produtos p{
+  margin-bottom:20px;
+}
+.cores-disponiveis{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+  margin-top:20px;
+}
+.cor-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  font-size:.9rem;
+}
+.cor{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:2px solid #ccc;
+  margin-bottom:5px;
+  transition:transform .2s ease;
+}
+.cor:hover{
+  transform:scale(1.1);
+}
+.cotacao{
+  background:url("imagens/fundocota.png") center/cover no-repeat;
+  padding:100px 20px;
+  text-align:center;
+  color:var(--branco);
+}
+.conteudo-cotacao{
+  max-width:800px;margin:0 auto;
+  background:rgba(11, 17, 70, 0.8);
+  padding:40px 30px;border-radius:16px;
+}
+.cotacao h2{
+  font-size:2.2rem;
+  margin-bottom:20px;
+}
+.cotacao p{
+  font-size:1.1rem;
+  margin-bottom:30px;
+}
+.formulario-cotacao{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+.formulario-cotacao input, 
+.formulario-cotacao textarea{
+  padding:12px 15px;
+  border-radius:8px;
+  border:none;
+  font-size:1rem;
+}
+.formulario-cotacao textarea{
+  resize:vertical;
+  min-height:100px;
+}
+.formulario-cotacao button{
+  padding:14px;
+  background:var(--azul-escuro);
+  color:var(--branco);
+  font-size:1.1rem;
+  font-weight:bold;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  transition:background .3s ease;
+}
+.formulario-cotacao button:hover{
+  background:#001f4d;
+}
+.quem-somos{
+  background:url("imagens/fundoqs.png") center/cover no-repeat;
+  padding:90px 20px;
+  text-align:center;
+  color:var(--branco);
+  position:relative;
+}
+.quem-somos::before{
+  content:"";
+  position:absolute;
+  inset:0;background:rgba(0,0,0,.6);
+}
+.conteudo-quemsomos{
+  position:relative;
+  z-index:1;
+  max-width:1150px;
+  margin:0 auto;
+  background:rgba(0,0,0,.5);
+  padding:35px 25px;
+  border-radius:15px;
+}
+.quem-somos h1{
+  margin-bottom:20px;
+  font-size:3rem;
+  font-weight:700;
+}
+.quem-somos h3{
+  margin-bottom:18px;
+  font-size:2rem;
+  font-weight:700;
+}
+.quem-somos p{
+  margin-bottom:15px;
+  font-size:1.1rem;
+}
+.valores{
+  list-style:none;
+  margin-bottom:0;
+  text-align:left;
+  padding:0;
+}
+.valores li{
+  margin-bottom:15px;
+}
+footer{
+  background:#1d1d1d;
+  color:var(--branco); 
+  text-align:center;
+  padding:40px 20px;
+}
+footer h2{
+  margin-bottom:20px;
+  font-weight:700;
+  font-size:1.5rem;
+}
+footer p{
+  margin-bottom:10px;
+  font-size:.95rem;
+}
+
+@media(max-width:768px){
+  .nav-links{gap:24px;}
+  .logo{width:70px;}
+  .hero-texto h1{font-size:2.4rem;}
+  .hero-texto h3{font-size:1.1rem;}
+  .cotacao h2,
+  .quem-somos h2{font-size:1.8rem;}
+}
+@media (max-width: 600px) {
+  .imagem-uniforme {
+    height: 180px;
+  }
+}
+.uniformes-corporativos {
+  background: linear-gradient(to right, #e0e0e0, #ffffff);
+  padding: 100px 30px;
+  text-align: center;
+  color: #1d1d1d;
+}
+.uniformes-corporativos {
+  background: url("imagens/Fundoquemsomos.png") center/cover no-repeat;
+  padding: 100px 30px;
+  color: #1d1d1d;
+}
+.container-uniformes {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.texto-uniformes {
+  max-width: 650px;
+  margin: 0 auto 60px;
+}
+.texto-uniformes h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #0d1832;
+}
+.texto-uniformes p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+.imagens-uniformes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+.imagem-uniforme.calca {
+  height: 200px; 
+}
+.imagem-uniforme {
+  height: 320px;      
+  width: auto;          
+  object-fit: contain;  
+}
+.cores-uniformes h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #0d1832;
+}
+.lista-cores {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.cor-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+}
+.cor {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #444;
+  margin-bottom: 8px;
+}
+.personalizado {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-top: 50px;
+  color: #0d1832;
+}
+.conteudo-uniformes {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.texto-uniformes {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+}
+.bloco-imagens {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imagens-uniformes {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.imagem-uniforme {
+  height: 320px;
+  width: auto;
+  object-fit: contain;
+}
+.lista-cores {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.imagem-uniforme {
+  height: 260px;
+  width: auto;
+  object-fit: contain;
+}
+.uniformes-corporativos {
+  background: linear-gradient(to right, #e0e0e0, #ffffff);
+  padding: 100px 30px;
+  color: #1d1d1d;
+}
+.conteudo-uniformes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-start;
+}
+.texto-uniformes {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+}
+.bloco-imagens {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.imagens-e-cores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imagens-uniformes {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.imagem-uniforme {
+  height: 260px;
+  width: auto;
+  object-fit: contain;
+}
+.cores-uniformes h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #0d1832;
+  text-align: center;
+}
+.lista-cores {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cor-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+}
+.cor {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #444;
+  margin-bottom: 5px;
+}
+
+.mensagem-envio {
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 6px;
+}
+
+.mensagem-envio.sucesso {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.mensagem-envio.erro {
+  background-color: #f8d7da;
+  color: #721c24;
+}
